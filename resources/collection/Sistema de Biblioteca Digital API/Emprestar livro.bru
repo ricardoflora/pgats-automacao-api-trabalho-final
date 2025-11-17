@@ -1,0 +1,22 @@
+meta {
+  name: Emprestar livro
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/loans/borrow
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "bookId": 0,
+    "days": 0
+  }
+}

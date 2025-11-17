@@ -1,0 +1,15 @@
+meta {
+  name: Meus empréstimos
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{baseUrl}}/loans/my-loans
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

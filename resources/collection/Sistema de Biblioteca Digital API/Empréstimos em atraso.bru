@@ -1,0 +1,15 @@
+meta {
+  name: Empréstimos em atraso
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/loans/overdue
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
