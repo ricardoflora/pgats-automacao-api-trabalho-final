@@ -15,8 +15,8 @@ API completa para gerenciamento de biblioteca digital, cadastro de membros, cat�
 
 1. Clone o repositório:
    ```sh
-   git clone <repo-url>
-   cd digital-library-api
+   git clone https://github.com/dennyscaetano/pgats-automacao-api-trabalho-final.git
+   cd pgats-automacao-api-trabalho-final
    ```
 2. Instale as dependências:
    ```sh
