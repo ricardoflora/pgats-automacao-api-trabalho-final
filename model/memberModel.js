@@ -4,21 +4,21 @@ const bcrypt = require('bcryptjs')
 const members = [
   {
     username: 'alexandre', 
-    password: bcrypt.hashSync('senha123', 8), 
+    password: bcrypt.hashSync('123456', 8), 
     membershipType: 'premium', 
     maxBooks: 5,
     borrowedBooks: []
   },
   {
     username: 'maria', 
-    password: bcrypt.hashSync('senha123', 8), 
+    password: bcrypt.hashSync('123456', 8), 
     membershipType: 'standard', 
     maxBooks: 3,
     borrowedBooks: []
   },
   {
     username: 'carlos', 
-    password: bcrypt.hashSync('senha123', 8), 
+    password: bcrypt.hashSync('123456', 8), 
     membershipType: 'premium', 
     maxBooks: 5,
     borrowedBooks: []
