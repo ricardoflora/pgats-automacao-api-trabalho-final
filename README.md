@@ -95,10 +95,51 @@ Rode `npm run start-graphql` para executar a API do GraphQL e acesse a URL http:
 - Um membro não pode emprestar o mesmo livro duas vezes.
 - Token JWT expira em 2 horas.
 
-## Testes
+
+## Testes Automatizados
+
+### Testes de API (Mocha)
 - O arquivo `app.js` pode ser importado em ferramentas de teste como Supertest.
 - Para testar a API GraphQL, importe `graphql/app.js` nos testes.
+- Execute todos os testes automatizados:
+  ```sh
+  npm test
+  ```
+
+### Testes de Performance (k6)
+Testes de performance são realizados com o [k6](https://k6.io/), uma ferramenta moderna para testes de carga.
+
+#### Pré-requisitos
+- Instale o k6 globalmente, se ainda não tiver:
+  ```sh
+  brew install k6
+  # ou
+  choco install k6
+  # ou consulte https://k6.io/docs/getting-started/installation/
+  ```
+
+#### Executando o teste de performance
+1. Certifique-se de que a API REST está rodando (`npm run start-rest`).
+2. Execute o teste de performance:
+   ```sh
+   npm run k6:performance
+   ```
+   Isso executa o script localizado em `test/k6/script-performance.js`.
+
+#### Gerando relatório resumido
+Para exportar um resumo dos resultados em JSON:
+```sh
+npm run k6:performance:summary
+```
+O arquivo será salvo em `mochawesome-report/k6-summary.json`.
+
+#### Boas práticas para testes de performance
+- Execute os testes em ambiente isolado, sem outros processos consumindo recursos.
+- Monitore CPU, memória e rede durante o teste.
+- Analise os percentis de resposta (`p(90)`, `p(95)`) e taxa de erro.
+- Ajuste o número de usuários virtuais (`vus`) e duração conforme o cenário desejado.
+- Documente e versiona scripts de teste.
 
 ---
 
-Para dúvidas, consulte a documentação Swagger, GraphQL Playground ou o código-fonte.
+Para dúvidas, consulte a documentação Swagger, GraphQL Playground, o código-fonte ou abra uma issue.

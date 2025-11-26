@@ -11,7 +11,9 @@
     "test-graphql-controller": "mocha 'test/graphql/controller/**/*.test.js' --timeout 10000 --reporter mochawesome",
     "start-rest": "node server.js",
     "start-graphql": "node graphql/server.js",
-    "start": "node server.js & node graphql/server.js"
+    "start": "node server.js & node graphql/server.js",
+    "k6:performance": "k6 run test/k6/script-performance.js",
+    "k6:performance:summary": "K6_WEB_DASHBOARD=true K6_WEB_DASHBOARD_PERIOD=1s K6_WEB_DASHBOARD_EXPORT=./mochawesome-report/k6-html-report.html k6 run test/k6/script-performance.js"
   },
   "keywords": [],
   "author": "",
