@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistema de Biblioteca Digital API
 
 API completa para gerenciamento de biblioteca digital, cadastro de membros, catálogo de livros e sistema de empréstimos. Desenvolvida para fins educacionais e testes automatizados de APIs.
@@ -293,3 +294,7 @@ group("Listando meus empréstimos", ...)
 
 ---
 
+=======
+# Testes_De_Performance_Trabalho_Final
+Projeto Trabalho Final Disciplina Automação de Testes de Performance  K6
+>>>>>>> de6051159870646c388d88027e8886619c4f9ce0
