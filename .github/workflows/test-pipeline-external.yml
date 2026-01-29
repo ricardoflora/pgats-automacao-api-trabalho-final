@@ -17,5 +17,9 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm install
+      - name: Start REST server in background
+        run: |
+          nohup npm run start-rest &
+          npx wait-on tcp:3000 --timeout 60000
       - name: Run pipelineExternal.test.js
         run: npx mocha test/rest/external/pipelineExternal.test.js --timeout 10000 --reporter spec
