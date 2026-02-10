@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b51899f381b29187e6b4da99a2009ef3eacf4fad
 # Sistema de Biblioteca Digital API
 
 API completa para gerenciamento de biblioteca digital, cadastro de membros, catálogo de livros e sistema de empréstimos. Desenvolvida para fins educacionais e testes automatizados de APIs.
@@ -134,6 +137,7 @@ npm run k6:performance:summary
 ```
 O arquivo será salvo em `mochawesome-report/k6-summary.json`.
 
+<<<<<<< HEAD
 
 ## Teste de Performance com K6 — Conceitos Aplicados
 
@@ -298,3 +302,15 @@ group("Listando meus empréstimos", ...)
 # Testes_De_Performance_Trabalho_Final
 Projeto Trabalho Final Disciplina Automação de Testes de Performance  K6
 >>>>>>> de6051159870646c388d88027e8886619c4f9ce0
+=======
+#### Boas práticas para testes de performance
+- Execute os testes em ambiente isolado, sem outros processos consumindo recursos.
+- Monitore CPU, memória e rede durante o teste.
+- Analise os percentis de resposta (`p(90)`, `p(95)`) e taxa de erro.
+- Ajuste o número de usuários virtuais (`vus`) e duração conforme o cenário desejado.
+- Documente e versiona scripts de teste.
+
+---
+
+Para dúvidas, consulte a documentação Swagger, GraphQL Playground, o código-fonte ou abra uma issue.
+>>>>>>> b51899f381b29187e6b4da99a2009ef3eacf4fad
