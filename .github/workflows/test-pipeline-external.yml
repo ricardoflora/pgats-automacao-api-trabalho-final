@@ -1,0 +1,29 @@
+# test-pipeline-external.yml
+# Adiciona testes external e workflow pipeline
+# Commit: 232286ee7e4da2fbc9c2224a4074246294377b9d
+
+name: Test Pipeline External
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Start REST server in background
+        run: |
+          nohup npm run start-rest &
+          npx wait-on tcp:3000 --timeout 60000
+      - name: Run pipelineExternal.test.js
+        run: npx mocha test/rest/external/pipelineExternal.test.js --timeout 10000 --reporter spec
