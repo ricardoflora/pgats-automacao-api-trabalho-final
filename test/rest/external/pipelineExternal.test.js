@@ -1,4 +1,5 @@
 // Bibliotecas
+// Trigger GitHub Actions: ajuste forçado em 10/02/2026
 const request = require('supertest')
 const { expect } = require('chai')
 
